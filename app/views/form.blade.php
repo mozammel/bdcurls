@@ -40,8 +40,7 @@ function selectText(element) {
 
 		@if(Session::has('link'))
 			<div id="selectme">
-				<!--- Html::link throws error in php 5.3, using alternative to it with URL::to -->
-				<h3 id="result" class="success">{{URL::to('/'.Session::get('link'))}}</h3>
+				<h3 id="result" class="success">{{link_to(Session::get('link'))}}</h3>
 			</div>
 			<h4 class="copymsg"><small>Press Ctrl+C or Cmd+C to copy to clipboard</small></h4>
 
